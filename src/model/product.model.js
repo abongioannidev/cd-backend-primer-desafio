@@ -18,6 +18,13 @@ export class Product {
     this.#id = Product.countProducts++;
   }
 
+  /**
+   * Metodo privado que establece un codigo a la instancia
+   * Si se recibe un valor o es una cadena de caracteres vacia producira una error.
+   * @param {string} value
+   * @exception Code is required
+   * @returns {void} void
+   */
   #setCode(value) {
     if (value !== undefined && value.trim() !== "") {
       this.#code = value;
@@ -91,6 +98,11 @@ export class Product {
     return this.#stock;
   }
 
+  /**
+   * Dos productos son iguales si tienen el mismo code
+   * @param {Product} object objeto que se envia como argumento para realizar la comparacion con la instancia
+   * @returns true o false
+   */
   equal(object) {
     return (
       object !== undefined &&
