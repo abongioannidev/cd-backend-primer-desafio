@@ -6,7 +6,7 @@ export class Product {
   #thumbnail;
   #code;
   #stock;
-  static countProducts = 0;
+  static #countProducts = 0;
 
   constructor(code, title, description, price, thumbnail, stock) {
     this.#setCode(code);
@@ -15,7 +15,7 @@ export class Product {
     this.#setPrice(price);
     this.#setThumbnail(thumbnail);
     this.#setStock(stock);
-    this.#id = Product.countProducts++;
+    this.#id = Product.#countProducts++;
   }
 
   /**
