@@ -101,7 +101,7 @@ export class Product {
   /**
    * Dos productos son iguales si tienen el mismo code
    * @param {Product} object objeto que se envia como argumento para realizar la comparacion con la instancia
-   * @returns true o false
+   * @returns {boolean} true o false
    */
   equal(object) {
     return (
